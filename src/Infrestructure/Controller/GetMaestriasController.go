@@ -31,11 +31,14 @@ func (c *GetAllAreasController)GetAreasController(ctx *gin.Context){
 
 	for _, area := range areas{
 		data := gin.H{
-			"id": area.IdMaestria,
-			"name": area.Nombre_maestria,
-			"imagen_miniatura": area.Imagen_miniatura,
-			"salario": area.Salario,
-			"cantidad_escuelas": area.Cantidad_escuelas,
+		"id":                 area.IdMaestria,
+        "nombre_maestria":    area.Nombre_maestria,
+        "description":        area.Description,
+        "salario":            area.Salario,
+        "areas":              area.Areas,
+        "cantidad_escuelas":  area.Cantidad_escuelas,
+        "escuelas":           area.Escuelas,
+		"imagen_miniatura": area.Imagen_miniatura,
 		}
 		dataAreas = append(dataAreas, data)
 	}
